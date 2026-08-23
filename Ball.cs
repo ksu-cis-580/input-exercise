@@ -8,7 +8,7 @@ namespace InputExercise
         /// <summary>
         /// The game this ball is a part of
         /// </summary>
-        private Game _game;
+        private InputExampleGame _game;
 
         /// <summary>
         /// A color to help distinguish one ball from another
@@ -30,7 +30,7 @@ namespace InputExercise
         /// </summary>
         /// <param name="game">The game this ball belongs in</param>
         /// <param name="color">A color to distinguish this ball</param>
-        public Ball(Game game, Color color) 
+        public Ball(InputExampleGame game, Color color) 
         {
             this._game = game;
             this._color = color;           

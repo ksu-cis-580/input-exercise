@@ -8,7 +8,7 @@ public class InputExampleGame : Game
 {
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
-    private Ball[] balls;
+    private Ball[] _balls;
 
     public InputExampleGame()
     {
@@ -20,7 +20,7 @@ public class InputExampleGame : Game
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
-        balls = new Ball[] {
+        _balls = new Ball[] {
             new Ball(this, Color.Red) { Position = new Vector2(250, 200) },
             new Ball(this, Color.Green) { Position = new Vector2(350, 200) },
             new Ball(this, Color.Blue) { Position = new Vector2(450, 200) }
@@ -34,7 +34,7 @@ public class InputExampleGame : Game
         _spriteBatch = new SpriteBatch(GraphicsDevice);
 
         // TODO: use this.Content to load your game content here
-        foreach (Ball b in balls) b.LoadContent();
+        foreach (Ball b in _balls) b.LoadContent();
     }
 
     protected override void Update(GameTime gameTime)
@@ -53,7 +53,7 @@ public class InputExampleGame : Game
 
         // TODO: Add your drawing code here
         _spriteBatch.Begin();
-        foreach (Ball b in balls) b.Draw(_spriteBatch);
+        foreach (Ball b in _balls) b.Draw(_spriteBatch);
         _spriteBatch.End();
 
         base.Draw(gameTime);
